@@ -99,6 +99,7 @@ a:hover {
 }
 #bio h4 span {
 	color: #888;
+	text-shadow: 0 0 10px rgba(180, 184, 219, 0.565);
 }
 #bio h5 {
 	font-size: 16px;
@@ -243,16 +244,19 @@ a:hover {
 .download-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #344fe5;
+    background-color: #021ba9;
     color: white;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    border-radius: 5px;
+	font-weight: bold;
+    border-radius: 45px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 .download-button:hover {
-    background-color: #45a049;
+    background-color: #ffff44;
+	color: #021ba9;
+	font-weight: bold;
 }
