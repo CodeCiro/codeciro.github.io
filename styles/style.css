@@ -320,6 +320,21 @@ p span:hover {
 /* ------------ */
 /* -- Footer -- */
 /* ------------ */
+
+.top {
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #6e6d6d;
+    border-radius: 100px;
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    z-index: 999; 
+}
+
+
 #footer {
 	clear: both;
 	margin: 40px 0 35px 0;

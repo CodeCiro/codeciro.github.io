@@ -15,7 +15,37 @@ function addSkillHoverEffect() {
     });
 }
 
-// Function to toggle dark mode
-function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
+const isDarkMode = () =>{
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
+
+//knowing when user reacher the bottom of the screen
+window.onscroll = () =>{
+    if((window.innerHeight + window.pageYOffset)>= document.body.offsetHeight){
+
+    }
+}
+
+//taking user back to top
+const toTop = () => window.scrollTo({top:0, behavior: 'smooth'});
+
+// show and hide button when scrolling.
+let timeout;
+
+function toggleButtonVisibility() {
+    const topButton = document.querySelector('.top');
+    clearTimeout(timeout); 
+
+    topButton.style.display = 'block';
+
+    timeout = setTimeout(function() {
+        topButton.style.display = 'block';
+    }, 500); 
+
+    topButton.style.display = 'none';
+}
+
+document.addEventListener('scroll', toggleButtonVisibility);
+
+
+
