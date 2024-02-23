@@ -99,12 +99,15 @@ a:hover {
 	font-weight: bold;
 }
 #bio h4 span {
-    color: #888;
+    color: #787676;
     /* Remove text-shadow property from here */
+    padding: 5px; /* Add padding to increase hitbox */
 }
 
 #bio h4 span:hover {
-    text-shadow: 0 0 10px rgba(28, 48, 229, 0.565); /* Apply text-shadow only on hover */
+    text-shadow: 0 0 10px rgba(70, 226, 8, 0.902); /* Apply text-shadow only on hover */
+    color: #000000;
+    padding: 15px; /* Increase padding on hover for a bigger hitbox */
 }
 #bio h5 {
 	font-size: 16px;
@@ -145,8 +148,30 @@ a:hover {
 #contact-details h5 {
 	color: #555;
 }
+#contact-details p {
+	float: left;
+	margin: 0 0 20px 0;
+	word-spacing: 0px;
+	text-align: justify;
+}
+
 #contact-details h5 span {
 	color: #888;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #8e8e8e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+	font-weight: bold;
+    border-radius: 45px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+	margin-top: 20px;
 }
 
 /* ----------------------- */
@@ -180,49 +205,57 @@ a:hover {
 /* -------------- */
 /* -- skills -- */
 /* -------------- */
-#skills {
-    overflow: hidden;
-    padding: 0 0 0 0;
-    text-align: left; /* Center aligning for the entire section */
+#skills,
+#tools,
+#softs {
+  overflow: hidden;
+  padding: 0 0 0 0;
+  text-align: left; /* Center aligning for the entire section */
 }
-#skills h3 {
-    margin: 0 0 25px 0;
-}
-
-#skills .skill {
-    display: inline-block; /* Displaying skills in a line */
-    vertical-align: top; /* Aligning elements to the top */
-    margin: 0 20px; /* Adjusting margin between skills */
-    width: 30%; /* Setting width for each skill */
-}
-#skills .first {
-    margin-left: 0;
-}
-#skills .last {
-    margin-right: 0;
-}
-#skills h4 {
-    margin: 0px 0 10px 0; /* Adjusting margin for h4 */
-    font-size: 18px;
-}
-#skills p {
-    margin: 0; /* Resetting margin for p elements */
+#skills h3,
+#tools h3,
+#softs h3 {
+  margin: 0 0 25px 0;
 }
 
-#skills p span {
-    box-shadow: 10px 4px 0px rgb(119, 120, 123);
-    padding: 15px; /* Increased padding for larger hitbox */
-    margin: 0 5px 5px 0;
-    display: inline-block;
-    border: 1px solid white;
-    border-radius: 5px;
-	background-color: whitesmoke;
-    transition: border-radius 0.3s ease, transform 0.3s ease; /* Adding transition for smooth tilt effect */
+.skill,
+.tool,
+.soft {
+  display: inline-block; /* Displaying skills in a line */
+  vertical-align: top; /* Aligning elements to the top */
+  margin: 0 10px; /* Adjusting margin between skills */
+  width: calc(33.33% - 20px); /* Setting width for each skill */
+}
+.first {
+  margin-left: 0;
+}
+.last {
+  margin-right: 0;
 }
 
-#skills p span:hover {
-    transform: rotate(5deg); /* Tilt to the right when hovered */
+h4 {
+  margin: 0px 0 10px 0; /* Adjusting margin for h4 */
+  font-size: 18px;
 }
+p {
+  margin: 0; /* Resetting margin for p elements */
+}
+
+p span {
+  box-shadow: 10px 4px 0px rgb(119, 120, 123);
+  padding: 15px; /* Increased padding for larger hitbox */
+  margin: 0 5px 5px 0;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 5px;
+  background-color: whitesmoke;
+  transition: border-radius 0.3s ease, transform 0.3s ease; /* Adding transition for smooth tilt effect */
+}
+
+p span:hover {
+  transform: rotate(5deg); /* Tilt to the right when hovered */
+}
+
 /* ------------------------ */
 /* -- Additional Details -- */
 /* ------------------------ */
@@ -264,28 +297,164 @@ a:hover {
 	margin-top: 10px;
 }
 
-.download-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #464d75;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-	font-weight: bold;
-    border-radius: 45px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.skill:nth-child(2) p {
-	display: inline-block;
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+	#wrap {
+	  width: 90%; /* Adjusting width for smaller screens */
+	  margin: 0 auto;
+	}
+  
+	/* Adjustments for Header */
+	#header {
+	  padding: 30px 0 10px 0;
+	}
+	#header h1 {
+	  font-size: 32px;
+	}
+	#header h2 {
+	  font-size: 24px;
+	}
+  
+	/* Adjustments for Bio */
+	#bio {
+	  margin: 35px 0 20px 0;
+	}
+	#bio #about {
+	  width: 100%;
+	  margin: 0 0 30px 0;
+	}
+	#photo-bg {
+	  float: none;
+	  margin: 0 auto 20px auto;
+	}
+	#contact-details {
+	  float: none;
+	  width: 100%;
+	}
+  
+	/* Adjustments for Featured Projects */
+	#featured-projects {
+	  margin: 0 0 20px 0;
+	}
+	.project {
+	  width: 100%;
+	}
+  
+	/* Adjustments for Skills, Tools, Softs */
+	.skill,
+	.tool,
+	.soft {
+	  width: 100%;
+	  margin: 0 0 15px 0;
+	}
   }
   
-  .skill:nth-child(2) p span {
-	display: inline-block;
-	border: 1px solid #000;
-	padding: 5px;
-	margin: 0 3px; /* Adjust spacing between boxes */
-	box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48), -6px -2px 16px 0px rgba(255, 255, 255, 0.8);
+  @media only screen and (max-width: 480px) {
+	/* Adjustments for Header */
+	#header h1 {
+	  font-size: 28px;
+	}
+	#header h2 {
+	  font-size: 20px;
+	}
+  
+	/* Adjustments for Bio */
+	#photo-bg {
+	  width: 100%;
+	  height: auto;
+	  margin: 0 auto 15px auto;
+	}
+	#contact-details p {
+	  margin-bottom: 15px;
+	}
+  
+	/* Adjustments for Featured Projects */
+	.project {
+	  height: auto;
+	}
   }
+  
+  /* Media Queries for Smartphone Browsers */
+@media only screen and (max-width: 480px) {
+	/* Adjustments for Header */
+	#header h1 {
+	  font-size: 24px;
+	}
+	#header h2 {
+	  font-size: 18px;
+	}
+  
+	/* Adjustments for Bio */
+	#bio h3 {
+	  font-size: 18px;
+	}
+	#bio h4 {
+	  font-size: 16px;
+	}
+	#bio h5 {
+	  font-size: 14px;
+	}
+	#bio p {
+	  font-size: 16px;
+	  line-height: 20px;
+	}
+	#photo-bg {
+	  width: 100%;
+	  height: auto;
+	  margin: 0 auto 15px auto;
+	}
+	#contact-details p {
+	  font-size: 16px;
+	  line-height: 20px;
+	  margin-bottom: 15px;
+	}
+  
+	/* Adjustments for Featured Projects */
+	#featured-projects h3 {
+	  font-size: 20px;
+	}
+	.project {
+	  height: auto;
+	  width: 100%;
+	  margin-bottom: 20px;
+	}
+  
+	/* Adjustments for Skills, Tools, Softs */
+	#skills h3,
+	#tools h3,
+	#softs h3 {
+	  font-size: 20px;
+	}
+	.skill,
+	.tool,
+	.soft {
+	  width: 100%;
+	  margin-bottom: 15px;
+	}
+	h4 {
+	  font-size: 16px;
+	}
+	p {
+	  font-size: 16px;
+	  line-height: 20px;
+	}
+  
+	/* Adjustments for Additional Details */
+	#testimonials h3 {
+	  font-size: 20px;
+	}
+	.testimonial {
+	  width: 100%;
+	  margin-bottom: 20px;
+	}
+  }
+  
+  /* Media Queries for Tablet Browsers */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+	/* Add tablet-specific adjustments here if needed */
+  }
+
+
+
+
+  /* Add more media queries as needed for finer control over responsiveness */
