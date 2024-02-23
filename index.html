@@ -40,21 +40,21 @@
     </div>
   </div>
   <div class="line"></div>
-  <div id="skills">
-    <h3>Skills</h3>
-    <div class="skill first"> <img src="images/arrow.png" alt="" />
-      <h4>Website Development</h4>
-      <p>Django | Javascript </p>
-    </div>
-    <div class="skill"> <img src="images/arrow.png" alt="" />
-      <h4>Software Development</h4>
-      <p>Languages C# | Java | .Net | Sql | Python |</p>
-    </div>
-    <div class="skill"> <img src="images/arrow.png" alt="" />
-      <h4>Mobile Development</h4>
-      <p>ANDROID | JAVA </p>
-    </div>
+<div id="skills">
+  <h3>Skills</h3>
+  <div class="skill first">
+    <h4>Website Development</h4>
+    <p><span>Django</span> <span>Javascript</span></p> <!-- Enclose each word within <span> -->
   </div>
+  <div class="skill">
+    <h4>Software Development</h4>
+    <p><span>C#</span> <span>Java</span> <span>.Net</span> <span>Sql</span> <span>Python</span></p> <!-- Enclose each word within <span> -->
+  </div>
+  <div class="skill last">
+    <h4>Mobile Development</h4>
+    <p><span>ANDROID</span> <span>JAVA</span></p> <!-- Enclose each word within <span> -->
+  </div>
+</div>
   <div class="line"></div>
   <div id="featured-projects">
     <h3>Featured Projects</h3>
@@ -68,5 +68,23 @@
     <p>Copyright&copy; CodeCiro - 2024 - All Rights Reserved / Design By Ciro Marcos</p>
   </div>
 </div>
+<script>
+  const spanElements = document.querySelectorAll('#skills p span');
+
+  spanElements.forEach(span => {
+      span.addEventListener('mouseenter', () => {
+          const randomRotation = Math.random() * 20 - 10; // Generate random angle between -10 and 10 degrees
+          span.style.transform = `rotate(${randomRotation}deg)`;
+      });
+  
+      span.addEventListener('mouseleave', () => {
+          span.style.transform = 'rotate(0deg)';
+      });
+  })
+</script>
+
+
+
+
 </body>
 </html>

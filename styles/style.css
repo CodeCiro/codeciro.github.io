@@ -96,10 +96,15 @@ a:hover {
 #bio h4 {
 	font-size: 20px;
 	margin: 0 0 0 0;
+	font-weight: bold;
 }
 #bio h4 span {
-	color: #888;
-	text-shadow: 0 0 10px rgba(28, 48, 229, 0.565);
+    color: #888;
+    /* Remove text-shadow property from here */
+}
+
+#bio h4 span:hover {
+    text-shadow: 0 0 10px rgba(28, 48, 229, 0.565); /* Apply text-shadow only on hover */
 }
 #bio h5 {
 	font-size: 16px;
@@ -176,30 +181,47 @@ a:hover {
 /* -- skills -- */
 /* -------------- */
 #skills {
-	overflow: hidden;
-	padding: 0 0 0 0;
+    overflow: hidden;
+    padding: 0 0 0 0;
+    text-align: left; /* Center aligning for the entire section */
 }
 #skills h3 {
-	margin: 0 0 25px 0;
+    margin: 0 0 25px 0;
 }
+
 #skills .skill {
-	float: left;
-	margin: 0 0 0 60px;
+    display: inline-block; /* Displaying skills in a line */
+    vertical-align: top; /* Aligning elements to the top */
+    margin: 0 20px; /* Adjusting margin between skills */
+    width: 30%; /* Setting width for each skill */
 }
 #skills .first {
-	margin-left: 0;
+    margin-left: 0;
 }
-#skills img {
-	float: left;
+#skills .last {
+    margin-right: 0;
 }
 #skills h4 {
-	float: left;
-	margin: 0px 0 10px 10px;
-	font-size: 18px;
+    margin: 0px 0 10px 0; /* Adjusting margin for h4 */
+    font-size: 18px;
 }
 #skills p {
-	clear: both;
-	width: 270px;
+    margin: 0; /* Resetting margin for p elements */
+}
+
+#skills p span {
+    box-shadow: 10px 4px 0px rgb(119, 120, 123);
+    padding: 15px; /* Increased padding for larger hitbox */
+    margin: 0 5px 5px 0;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 5px;
+	background-color: whitesmoke;
+    transition: border-radius 0.3s ease, transform 0.3s ease; /* Adding transition for smooth tilt effect */
+}
+
+#skills p span:hover {
+    transform: rotate(5deg); /* Tilt to the right when hovered */
 }
 /* ------------------------ */
 /* -- Additional Details -- */
@@ -256,8 +278,14 @@ a:hover {
     transition: background-color 0.3s;
 }
 
-/* .download-button:hover {
-    background-color: #f4f43d;
-	color: #464d75;
-	font-weight: bold;
-} */
+.skill:nth-child(2) p {
+	display: inline-block;
+  }
+  
+  .skill:nth-child(2) p span {
+	display: inline-block;
+	border: 1px solid #000;
+	padding: 5px;
+	margin: 0 3px; /* Adjust spacing between boxes */
+	box-shadow: 6px 2px 16px 0px rgba(136, 165, 191, 0.48), -6px -2px 16px 0px rgba(255, 255, 255, 0.8);
+  }
