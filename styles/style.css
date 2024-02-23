@@ -321,6 +321,17 @@ p span:hover {
 /* -- Footer -- */
 /* ------------ */
 
+#footer {
+	clear: both;
+	margin: 40px 0 35px 0;
+	border-top: 3px #ddd solid;
+}
+#footer p {
+	font-size: 18px;
+	color: #aaa;
+	margin-top: 10px;
+}
+
 .top {
     text-decoration: none;
     padding: 10px;
@@ -332,18 +343,6 @@ p span:hover {
     bottom: 20px; 
     right: 20px; 
     z-index: 999; 
-}
-
-
-#footer {
-	clear: both;
-	margin: 40px 0 35px 0;
-	border-top: 3px #ddd solid;
-}
-#footer p {
-	font-size: 18px;
-	color: #aaa;
-	margin-top: 10px;
 }
 
 /* Media Queries for Responsive Design */
