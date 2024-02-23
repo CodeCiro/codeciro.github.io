@@ -143,7 +143,9 @@ a:hover {
 }
 #contact-details {
 	float: right;
-	width: 270px;
+	width: calc(270px - 13px); /* Decrease width by 10px to accommodate padding */
+	padding-right: 13px; /* Add right padding */
+	margin-right: 13px;
 }
 #contact-details h5 {
 	color: #555;
@@ -205,42 +207,74 @@ a:hover {
 /* -------------- */
 /* -- skills -- */
 /* -------------- */
-#skills,
+#skills {
+  overflow: hidden;
+  padding: 0 0 0 0;
+  text-align: left; /* Center aligning for the entire section */
+  margin-bottom: 20px;
+
+}
+
 #tools,
 #softs {
   overflow: hidden;
   padding: 0 0 0 0;
-  text-align: left; /* Center aligning for the entire section */
+  text-align: left;
+  margin-bottom: 20px; /* Center aligning for the entire section */
+
+
 }
 #skills h3,
 #tools h3,
 #softs h3 {
-  margin: 0 0 25px 0;
+  margin: 10 0 25px 0;
+  font-weight: bold;
 }
 
-.skill,
-.tool,
-.soft {
+.skill {
   display: inline-block; /* Displaying skills in a line */
   vertical-align: top; /* Aligning elements to the top */
   margin: 0 10px; /* Adjusting margin between skills */
   width: calc(33.33% - 20px); /* Setting width for each skill */
 }
+
+.tool,
+.soft {
+  display: inline-block; /* Displaying skills in a line */
+  vertical-align: top; /* Aligning elements to the top */
+  margin: 0 10px; /* Adjusting margin between skills */
+  margin-left: 0;
+  width: auto; /* Setting width for each skill */
+}
+
 .first {
   margin-left: 0;
+
 }
 .last {
-  margin-right: 0;
+
+  margin-right: 10px;
+
 }
 
 h4 {
   margin: 0px 0 10px 0; /* Adjusting margin for h4 */
   font-size: 18px;
+  text-align: center;
+  font-weight: bold;
 }
 p {
   margin: 0; /* Resetting margin for p elements */
+  
 }
 
+#tools p,
+#softs p {
+	display: inline-block; /* Words will stack beside each other */
+	margin: 0; /* Remove any default margins */
+	max-width: none; /* No maximum width */
+	display: inline;
+}
 p span {
   box-shadow: 10px 4px 0px rgb(119, 120, 123);
   padding: 15px; /* Increased padding for larger hitbox */
@@ -373,9 +407,9 @@ p span:hover {
 	  height: auto;
 	}
   }
-  
+
   /* Media Queries for Smartphone Browsers */
-@media only screen and (max-width: 480px) {
+	@media only screen and (max-width: 480px) {
 	/* Adjustments for Header */
 	#header h1 {
 	  font-size: 24px;
@@ -453,8 +487,5 @@ p span:hover {
   @media only screen and (min-width: 481px) and (max-width: 768px) {
 	/* Add tablet-specific adjustments here if needed */
   }
-
-
-
 
   /* Add more media queries as needed for finer control over responsiveness */

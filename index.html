@@ -4,8 +4,6 @@
 <title>Ciro Marcos - Developer</title>
 <meta charset="utf-8">
 <link type="text/css" rel="stylesheet" href="styles/style.css" />
-<!--[if IE 6]><link rel="stylesheet" href="styles/ie6.css" /><![endif]-->
-<!--[if IE 7]><link rel="stylesheet" href="styles/ie7.css" /><![endif]-->
 </head>
 <body>
 <div id="wrap">
@@ -26,6 +24,7 @@
 
       <h4>Status: <span>Open For Internship and Junior Developer positions</span></h4>
     </div>
+    
     <div id="contact-details">
       <h3>Contact Me</h3>
       <p>If you're looking to reach out regarding internship or job opportunities, feel free to contact me.</p>
@@ -35,6 +34,7 @@
       <p></p>
       <h5>Click Below to Dowload My Resume</span></h5>   
     <button class="download-button" onclick="window.location.href='documents/Ciro Marcos Resume.pdf'" download>Click to Download</button>
+    
 </body>
 </html>
     </div>
@@ -45,47 +45,37 @@
     <h3>Technical Skills</h3>
     <div class="skill first">
       <h4>Website Development</h4>
-      <p><span>Django</span> <span>Javascript</span></p> <!-- Enclose each word within <span> -->
+      <p><span>Django</span> <span>Javascript</span> <span>PHP</span></p> <!-- Enclose each word within <span> -->
     </div>
     <div class="skill">
       <h4>Software Development</h4>
-      <p><span>C#</span> <span>Java</span> <span>.Net</span> <span>Sql</span> <span>Python</span></p> <!-- Enclose each word within <span> -->
+      <p><span>C#</span> <span>Java</span> <span>.Net</span> <span>SQL</span> <span>Python</span></p> 
     </div>
     <div class="skill last">
       <h4>Mobile Development</h4>
-      <p><span>ANDROID</span> <span>JAVA</span></p> <!-- Enclose each word within <span> -->
+      <p><span>ANDROID</span> <span>Java</span></p> 
     </div>
+    <div class="skill first">
+      <h4>Concepts</h4>
+      <p><span>Object Oriented Programming</span> <span>Database Design</span> <span>SOLID</span></p> 
+    </div>
+    
   </div>
 
   <div id="tools">
     <h3>Tools and Technologies</h3>
-    <div class="tool first">
-      <h4>Website Development</h4>
-      <p><span>Django</span> <span>Javascript</span></p> <!-- Enclose each word within <span> -->
-    </div>
     <div class="tool">
-      <h4>Software Development</h4>
-      <p><span>C#</span> <span>Java</span> <span>.Net</span> <span>Sql</span> <span>Python</span></p> <!-- Enclose each word within <span> -->
-    </div>
-    <div class="tool last">
-      <h4>Mobile Development</h4>
-      <p><span>ANDROID</span> <span>JAVA</span></p> <!-- Enclose each word within <span> -->
+      <p><span>Visual Studio IDE</span> <span>Firebase</span> <span>Android Studio IDE</span> 
+      <span>JetBrains</span> <span>SQL (SSMS)</span> <span>GitHub</span> <span>SQLite</span> <span>Git</span>
+      <span>Figma</span> <span>MongoDB</span> <span>Xampp</span> <span>Eclipse IDE</span> <span>wordPress</span></p> <!-- Enclose each word within <span> -->
     </div>
   </div>
 
   <div id="softs">
     <h3>Soft Skills</h3>
-    <div class="soft first">
-      <h4>Website Development</h4>
-      <p><span>Django</span> <span>Javascript</span></p> <!-- Enclose each word within <span> -->
-    </div>
     <div class="soft">
-      <h4>Software Development</h4>
-      <p><span>C#</span> <span>Java</span> <span>.Net</span> <span>Sql</span> <span>Python</span></p> <!-- Enclose each word within <span> -->
-    </div>
-    <div class="soft last">
-      <h4>Mobile Development</h4>
-      <p><span>ANDROID</span> <span>JAVA</span></p> <!-- Enclose each word within <span> -->
+      <p><span>Interpersonal Skills</span> <span>Analytical Skills</span> <span>Customer Service</span> <span>Teamwork</span>
+        <span>Critical Thinking</span> <span>Problem Solving</span></p> <!-- Enclose each word within <span> -->
     </div>
   </div>
     <div class="line"></div>
@@ -114,10 +104,11 @@
           span.style.transform = 'rotate(0deg)';
       });
   })
+
+  document.getElementById("dark-mode-toggle").addEventListener("click", function() {
+    document.body.classList.toggle("dark-mode");
+});
 </script>
-
-
-
 
 </body>
 </html>
